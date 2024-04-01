@@ -1,0 +1,12 @@
+app:
+
+  log: d            # допустимые уровни логирования DEBUG, INFO, WARNING, ERROR, FATAL
+  timing: f         # при достижении параметром log этого уровня становятся видным время исполнения запросов
+#  log_format: '%(asctime)s %(levelname).1s: %(req_id)s: %(filename)s/%(funcName)s(%(lineno)s): %(message)s'
+  debug: False
+
+  uvicorn:
+    log: error
+    host: 0.0.0.0       # технический адрес ASGI сервера (продуктового)
+    port: 8000          # порт, который слушает приложение
+    workers: 1          # количество рабочих процессов = количество_ядер * количество_потоков_ядра + 1

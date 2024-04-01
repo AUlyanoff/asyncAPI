@@ -1,0 +1,11 @@
+# -------------------------------
+db:
+  type: mock
+  host: 10.17.7.96
+  port: 5432
+  name: sphone
+  user: sphone
+  password: 111
+  checkversion: false
+  sslmode: disable
+# -------------------------------

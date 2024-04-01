@@ -1,0 +1,41 @@
+[flake8]
+max-line-length = 120
+
+# игнорируем
+# пути прописаны с * так как внутри docker контейнера лежат чуть по другому
+exclude=
+    # список процедур так как автоматический
+    src/database/procedures/procedure_list.py
+    src/database/procedures/__init__.py
+
+    # json
+    src/json
+
+    # тесты сложно форматировать по flake, байтовые последовательности, большие словари итд
+    src/test
+
+
+# Игнорирование ошибок
+extend-ignore =
+    # pydocstyle коды связаны с докстрингами
+    # больше информации: https://www.pydocstyle.org/en/6.3.0/error_codes.html
+    D100, D101, D104, D105, D106, D107,
+    D200, D202, D204, D205, D208, D210
+    D400, D401, D403,
+
+    # основные исключения
+    # https://flake8.pycqa.org/en/latest/user/error-codes.html
+    # Bare except
+    E722
+
+    # Imported but unused
+    F401
+
+    # invalid escape sequence
+    W605
+
+# Игнорирование конкретных ошибок в конкретных файлах
+# per-file-ignores =
+    # Игнорирование module level import not at top of file
+    # Конкретно тут оправдано
+    # src/app/mdm_app.py:E402
