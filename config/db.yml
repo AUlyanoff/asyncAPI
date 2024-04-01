@@ -1,0 +1,7 @@
+db:     # удалённая база Ульянова
+  name: asyncpg
+  db_schema: public
+  host: ep-snowy-limit-67291163-pooler.eu-central-1.aws.neon.tech
+  port: 5432
+  user: AUlyanoff
+  password: me5zLZGsNV8i
